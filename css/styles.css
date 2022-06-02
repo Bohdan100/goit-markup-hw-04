@@ -115,6 +115,7 @@ p {
 .menu-link {
   color: #212121;
   text-decoration: none;
+  outline: none;
 }
 
 .menu-link:hover,
@@ -128,10 +129,11 @@ p {
 
 .contacts-link {
   display: flex;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+
   color: var(--second-text-color);
   text-decoration: none;
+  outline: none;
 }
 
 .mail-icon {
@@ -160,7 +162,7 @@ p {
     url("../images/background-photo.jpg");
   max-width: 1600px;
   height: 600px;
-  margin: 0, auto;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -193,9 +195,11 @@ p {
   color: var(--first-background-color);
   background-color: var(--acent-color);
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ----------------ADVANTAGES----------------------------- */
@@ -203,8 +207,6 @@ p {
 .advantages {
   padding-top: var(--padding-section);
   padding-bottom: 0;
-
-  background-color: var(--third-background-color);
 }
 
 /* flex для преимуществ - 4 описания */
@@ -216,7 +218,6 @@ p {
 }
 
 .adventages-list-item {
-  min-width: 270px;
 }
 
 .adventages-list-item:not(:last-child) {
@@ -245,12 +246,14 @@ p {
 /* -----------SVG-----------ICONS---------------- */
 
 .advantages-icon-block {
-  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 270px;
   height: 120px;
 
   margin-bottom: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
 
   border-radius: 4px;
   text-align: center;
@@ -262,8 +265,6 @@ p {
 .activity {
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
-
-  background-color: var(--third-background-color);
 }
 
 .activity-title {
@@ -366,21 +367,35 @@ p {
 
 .icon-link {
   display: flex;
-  width: 100%;
-  height: 100%;
-  border: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
   color: var(--third-text-color);
 }
 
 .social-network-icon {
   fill: currentColor;
+  width: 100%;
+  height: 100%;
 }
 
 .social-network-icon:hover,
 .social-network-icon:focus {
   fill: var(--first-background-color);
   background-color: var(--acent-color);
+}
+
+.icon-link:hover .social-network-icon,
+.icon-link:focus .social-network-icon {
+  color: var(--first-background-color);
+  background-color: var(--acent-color);
   border-radius: 50%;
+}
+
+.icon-link:focus {
+  outline: none;
 }
 
 /* --------------------CLIENTS-------------------------- */
@@ -388,8 +403,6 @@ p {
 .clients {
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
-
-  background-color: var(--third-background-color);
 }
 
 .clients-title {
@@ -421,9 +434,10 @@ p {
 /* ---------------SVG-icons----------------- */
 .clients-link {
   display: flex;
+  justify-content: center;
+  text-align: center;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
   color: var(--third-text-color);
 
   border: 1px solid var(--third-text-color);
@@ -445,6 +459,10 @@ p {
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--acent-color);
+}
+
+.clients-link:focus {
+  outline: none;
 }
 
 /* ---------------------FOOTER--------------------- */
@@ -487,6 +505,7 @@ p {
 
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  outline: none;
 }
 
 .footer-contacts:hover,
@@ -517,8 +536,10 @@ p {
 
 .footer-icon-link {
   display: flex;
-  width: 100%;
-  height: 100%;
+
+  width: 44px;
+  height: 44px;
+
   border-radius: 50%;
   color: var(--first-background-color);
   background-color: rgba(255, 255, 255, 0.1);
@@ -528,10 +549,19 @@ p {
   fill: currentColor;
 }
 
-.footer-network-icon:hover,
-.footer-network-icon:focus {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+  background-color: var(--acent-color);
+}
+
+.footer-icon-link:hover .footer-network-icon,
+.footer-icon-link:focus .footer-network-icon {
   background-color: var(--acent-color);
   border-radius: 50%;
+}
+
+.footer-icon-link:focus {
+  outline: none;
 }
 
 /* ----PORTFOLIO-------PROJECTS--------------- */
@@ -539,8 +569,6 @@ p {
 .projects {
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
-
-  background-color: var(--third-background-color);
 }
 
 /* СПИСОК КНОПОК */
@@ -574,13 +602,14 @@ p {
   color: inherit;
   background-color: var(--second-background-color);
 
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
 }
 
 .projects button:hover,
 .projects button:focus {
-  border-radius: 4px;
   color: var(--first-background-color);
   background-color: var(--acent-color);
 
